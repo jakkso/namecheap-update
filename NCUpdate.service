@@ -1,0 +1,12 @@
+[Unit]
+Description=Namecheap Dynamic DNS Update Service
+After=network.target
+Wants=NCUpdate.timer
+
+[Service]
+User=username
+WorkingDirectory=/absolute/path/to/project/directory
+ExecStart=/absolute/path/to/NCUpdate.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=Namecheap Dynamic DNS Update Service Timer
+Requires=NCUpdate.service
+
+[Timer]
+Unit=NCUpdate.service
+OnCalendar=*:0/30
+[Install]
+WantedBy=timers.target
